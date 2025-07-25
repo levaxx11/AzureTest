@@ -1,0 +1,26 @@
+﻿@page
+@model WebApplication1.Pages.CommentsModel
+@{
+    ViewData["Title"] = "Comment";
+}
+
+<h2>Write a comment</h2>
+
+<form method="post">
+    <input asp-for="UserName" placeholder="Name" required />
+    <br />
+    <textarea asp-for="Text" placeholder="Comment" rows="4" cols="50" required></textarea>
+    <br />
+    <button type="submit">Apply</button>
+</form>
+
+<hr />
+
+<h3>Comment</h3>
+@foreach (var comment in Model.Comments)
+{
+    <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
+        <strong>@comment.UserName</strong> (@comment.Date.ToString("g"))<br />
+        <p>@comment.Text</p>
+    </div>
+}

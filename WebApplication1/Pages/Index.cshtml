@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Cars";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Car Info Site!</h1>
+    <p>Here you'll find information about popular car brands.</p>
+
+
+
+    <hr />
+
+    <h2>Popular Car Brands:</h2>
+
+    <div class="car-list">
+        <div class="car-item">
+            <h3>🚗 Toyota</h3>
+            <p>Reliable Japanese cars perfect for city driving and long trips.</p>
+        </div>
+        <div class="car-item">
+            <h3>🚙 BMW</h3>
+            <p>German engineering with premium comfort and top-tier performance.</p>
+        </div>
+        <div class="car-item">
+            <h3>🚘 Tesla</h3>
+            <p>Next-generation electric vehicles with autopilot and innovation.</p>
+        </div>
+        <div class="car-item">
+            <h3>🚕 Lada</h3>
+            <p>A classic Russian brand known for simple and affordable vehicles.</p>
+        </div>
+    </div>
+
+
+    <a asp-page="/Comments" class="btn btn-primary">Comment</a>
+</div>
